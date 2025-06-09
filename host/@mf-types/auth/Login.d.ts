@@ -1,2 +1,2 @@
-export * from './compiled-types/Login/Login';
-export { default } from './compiled-types/Login/Login';
+export * from './compiled-types/Login';
+export { default } from './compiled-types/Login';
