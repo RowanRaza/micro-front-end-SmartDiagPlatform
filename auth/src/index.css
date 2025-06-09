@@ -1,10 +1,18 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(45deg, #d8c4b3, #fff);
 }
 
-.container {
-  font-size: 3rem;
-  margin: auto;
-  max-width: 800px;
-  margin-top: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
