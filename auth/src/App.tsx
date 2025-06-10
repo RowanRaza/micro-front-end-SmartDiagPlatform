@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-import Login from "./Login";
+import Login from "./page/Login";
 
 const App = () => (
   <Login/>

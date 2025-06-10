@@ -1,7 +1,7 @@
 import './login.css'
-import coverImg from './assets/img/cover.png';
-import userIcon from './assets/icons/user.svg';
-import lockIcon from './assets/icons/lock.svg';
+import coverImg from '../assets/img/cover.png';
+import userIcon from '../assets/icons/user.svg';
+import lockIcon from '../assets/icons/lock.svg';
 
 export default () => {
     return (
