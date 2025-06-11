@@ -1,5 +1,8 @@
 export const mfConfig = {
   name: "users",
-  exposes: {},
+  filename: "remoteEntry.js",
+  exposes: {
+    
+  },
   shared: ["react", "react-dom"],
 };
