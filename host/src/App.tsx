@@ -1,23 +1,21 @@
 import ReactDOM from "react-dom/client";
 
-import "./index.css";
-// import Login from 'auth/Login';
-import MenuBar from "./menu-bar/MenuBar";
 import { useState } from "react";
-import Header from "./menu-bar/Header";
+import {AuthProvider} from "auth/AuthContext";
+import "./index.css";
+import MenuBar from "./component/access-bar/MenuBar";
+import Header from "./component/access-bar/Header";
+import AppRoute from "./route/AppRoute";
 
 function App() {
     const [sidebarVisible, setSidebarVisible] = useState(true);
 
     return (
-        <div className="main-container">
-            <MenuBar isVisible={sidebarVisible} />
-            
-            <div className="content">
-                <Header onHamburgerClick={()=>setSidebarVisible(!sidebarVisible)}/>
-                <p>DashBoard ohatra</p>
-            </div>
-        </div>
+        <AuthProvider>
+            <>
+                <AppRoute/>
+            </>
+        </AuthProvider>
     );
 }
 

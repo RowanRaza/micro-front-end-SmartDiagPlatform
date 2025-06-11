@@ -1,8 +1,8 @@
 export const mfConfig = {
-  name: "dashboard",
+  name: "notifications",
   filename: "remoteEntry.js",
   exposes: {
-    './Dashboard' : './src/page/dashboard/Dashboard.tsx'
+    "./Notification" : "./src/page/Notification.tsx"
   },
   shared: ["react", "react-dom"],
 };

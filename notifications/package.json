@@ -1,5 +1,5 @@
 {
-  "name": "host",
+  "name": "notifications",
   "version": "0.0.1",
   "scripts": {
     "build": "cross-env NODE_ENV=production rspack build",
@@ -27,8 +27,6 @@
   "dependencies": {
     "@module-federation/enhanced": "^0.8.9",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.6.2"
+    "react-dom": "^19.0.0"
   }
 }

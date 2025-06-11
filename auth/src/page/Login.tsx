@@ -1,7 +1,7 @@
 import './login.css'
 import coverImg from '../assets/img/cover.png';
-import userIcon from '../assets/icons/user.svg';
-import lockIcon from '../assets/icons/lock.svg';
+import { FaLock } from "react-icons/fa";
+import { FaUser } from "react-icons/fa6";
 
 export default () => {
     return (
@@ -22,11 +22,11 @@ export default () => {
                     <form action="">
                         <div className="input-box">
                             <input type="text" placeholder="Nom d'utilisateur" required/>
-                            <img src={userIcon} className="icon"/>
+                            <FaUser className='icon'/>
                         </div>
                         <div className="input-box">
                             <input type="Password" placeholder="Mot de passe" required/>
-                            <img src={lockIcon} className="icon"/>
+                            <FaLock className='icon'/>
                         </div>
                         <button className='btn' type="submit">Se connecter</button>
                     </form>

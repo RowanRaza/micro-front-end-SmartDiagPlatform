@@ -1,0 +1,18 @@
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #f7f7f7;
+}
+
+.mb-container.hidden + .content {
+    margin-left: 0;
+}

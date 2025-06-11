@@ -8,12 +8,13 @@
 .mb-container {
     position: fixed; 
     height: 100vh;
-    width: 200px;
+    width: 250px;
     background-color: #fdfdfd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 7px rgba(0, 0, 0, .2);
     z-index: 100;
     transform: translateX(0);
     transition: transform 0.3s ease;
+    border-top-right-radius: 15px;
 }
 
 .mb-container.hidden {
@@ -31,14 +32,14 @@ ul {
 }
 
 #logo span {
-    color: #d67155;
+    color: #bb8271;
     font-style: italic;
 }
 
 .section {
     padding: 10px 24px;
     margin: 1px 5px;
-    color: #777;
+    color: #333;
     cursor: pointer;
     transition: color 0.2s;
     display: flex;
@@ -49,13 +50,12 @@ ul {
 }
 
 .section.active {
-    border-color: #ddd;
+    border-color: #999;
     font-weight: bold;
 }
 
 .section:hover {
-    background: rgba(214, 113, 85, 1);
-    color: #fff;
+    background: #eee;
 }
 
 .section.account {

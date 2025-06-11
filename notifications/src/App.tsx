@@ -1,10 +1,12 @@
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-import Dashboard from "./page/dashboard/Dashboard";
 
 const App = () => (
-  <Dashboard/>
+  <div className="mt-10 text-3xl mx-auto max-w-6xl">
+    <div>Name: notifications</div>
+    <div>Framework: react-19</div>
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
