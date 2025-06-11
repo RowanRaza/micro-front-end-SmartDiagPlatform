@@ -1,7 +1,7 @@
 // App.jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ProtectedRoute from './ProtectedRoute';
-import ProtectedLayout from './ProtectedLayout';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./ProtectedRoute";
+import ProtectedLayout from "./ProtectedLayout";
 import Login from "auth/Login";
 import Dashboard from "dashboard/Dashboard";
 import Notification from "notifications/Notification";
@@ -10,6 +10,8 @@ function AppRoute() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Login />} />
+
         {/* Routes publiques */}
         <Route path="/login" element={<Login />} />
 
@@ -30,5 +32,4 @@ function AppRoute() {
     </BrowserRouter>
   );
 }
-
 export default AppRoute;
