@@ -1,0 +1,140 @@
+/* CONTAINER & LAYOUT */
+.calendar-container {
+  padding: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f0ebe9;
+  padding-bottom: 6.5%;
+}
+
+.calendar-nav.centered-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.calendar-nav.centered-nav button {
+  padding: 0.35rem 0.7rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #bb8271;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.calendar-nav.centered-nav button:hover {
+  color: #d67454;
+}
+
+.month-year {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  color: #4b3a35;
+  text-transform: capitalize;
+}
+
+/* NAVIGATION FLECHES */
+.calendar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.arrow-button {
+  font-size: 1.4rem;
+  padding: 0.3rem 0.6rem;
+  background: none;
+  border: none;
+  color: #bb8271;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.arrow-button:hover {
+  background-color: rgba(187, 130, 113, 0.1);
+}
+
+/* DAYS */
+.calendar-days {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.calendar-day {
+  flex: 1;
+  min-width: 90px;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.calendar-day:hover {
+  background-color: #f9f5f4;
+  border-color: #e9dedb;
+}
+
+.calendar-day.selected {
+  background-color: #fbf4f2;
+  border-color: #d67454;
+}
+
+/* STYLE SPECIAL POUR LE JOUR DU CENTRE */
+.calendar-day.center-day {
+  flex: 1.5;
+  background-color: #bb8271;
+  border: 1px solid #bb8271;
+  color: #ffffff;
+}
+
+.calendar-day.center-day .day-name,
+.calendar-day.center-day .day-date,
+.calendar-day.center-day .day-year {
+  color: #ffffff;
+}
+
+/* TEXTES */
+.day-name {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #4b3a35;
+}
+
+.day-date {
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  color: #6b4e45;
+}
+
+.day-year {
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  color: #a89b95;
+}
+
+.calendar-selection {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8d7269;
+  font-style: italic;
+}

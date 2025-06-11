@@ -1,0 +1,20 @@
+.dashboard-chart-container {
+  max-width: 480px; /* plus petit que 600px */
+  margin: 0 auto;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-chart-container .u-root {
+  width: 100% !important;
+  height: 220px !important;
+}
+
+.dashboard-chart-container .u-title {
+  font-size: 0.9rem !important; /* un peu plus petit */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
