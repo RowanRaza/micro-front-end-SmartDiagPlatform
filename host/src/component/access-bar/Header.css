@@ -19,7 +19,7 @@
     display: block;
     visibility: visible;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 620px) {
     .home-icon {
         display: block;
         visibility: visible;
