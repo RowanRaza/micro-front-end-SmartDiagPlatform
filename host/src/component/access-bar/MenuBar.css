@@ -52,8 +52,7 @@ ul {
 .section.active {
   border-color: #bb8271;
   font-weight: bold;
-  background-color: #f3ebe9;
-  color: #bb8271;
+  color: #403232;
 }
 
 .section:hover {
