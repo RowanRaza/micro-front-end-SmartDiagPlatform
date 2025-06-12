@@ -1,0 +1,62 @@
+.global-dashboard-container {
+  position: relative;
+  height: 102%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(219, 114, 84, 0.15);
+  color: #bb8271;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* Texte au dessus, centré */
+.text-top {
+  position: absolute;
+  top: 30px;
+  left: 40%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #d67454;
+  letter-spacing: 1px;
+}
+
+/* Texte à gauche vertical */
+.text-left {
+  position: absolute;
+  top: 50%;
+  right: 75%;
+  transform: translateY(2%) rotate(-90deg) scaleX(1.5);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #bb8271;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Texte en haut à droite */
+.text-top-right {
+  position: absolute;
+  top: 33px;
+  right: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #d67454;
+  opacity: 0.9;
+}
+
+/* Le pourcentage grand en bas à droite */
+.percentage {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-weight: 900;
+  font-size: 5rem;
+  color: #d67454;
+  text-shadow: 1px 1px 3px rgba(187, 130, 113, 0.5);
+  user-select: none;
+  line-height: 1;
+  transform-origin: bottom right; /* pour que l’étirement parte du bas à droite */
+  transform: scaleY(3); /* étire en hauteur de 1.5x */
+}

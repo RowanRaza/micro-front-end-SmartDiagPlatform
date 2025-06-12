@@ -1,0 +1,70 @@
+.equipment-history {
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.history-title {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #d67454;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-left: 4px solid #d67454;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(214, 116, 84, 0.2);
+}
+
+.history-name,
+.history-date,
+.history-status {
+  flex: 1;
+}
+
+.history-name {
+  text-align: left;
+}
+
+.history-date {
+  text-align: center;
+}
+
+.history-status {
+  text-align: right;
+}
+
+.status-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Couleurs selon état */
+.status-circle.bien {
+  background-color: #4caf50;
+}
+.status-circle.anormal {
+  background-color: #ffc107;
+}
+.status-circle.mauvais {
+  background-color: #f44336;
+}
