@@ -7,6 +7,7 @@
         border: 1px solid lightgrey;
         padding: 15px;
         background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.05)
     }
     th {
         background: #eee;
