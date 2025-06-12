@@ -31,7 +31,7 @@ function AppRoute() {
         >
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Notifications" element={<Notification />} />
-          <Route path="Utilisateurs" element={<Users />} />
+          {user?.role==="admin" && <Route path="Utilisateurs" element={<Users />} />}
           <Route path="Materiels" element={<Materiels />} />
           <Route path="Mon_compte" element={<Profile user={{nom: user?.username || '', role: user?.role || ''}} onLogout={() => {logout(); navigate('/')}}/>} />
           <Route path="*" element={<Dashboard/>} />
