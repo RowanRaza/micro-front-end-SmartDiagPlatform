@@ -35,8 +35,8 @@ const App = () => {
 
   return (
     <div>
-      <UserList data={users} itemsPerPage={5} onEditSelect={handleEditSelect} onDelete={handleDelete} />
       <UserForm selectedUser={selectedUser} onSave={handleSave} />
+      <UserList data={users} itemsPerPage={5} onEditSelect={handleEditSelect} onDelete={handleDelete} />
     </div>
   );
 };
