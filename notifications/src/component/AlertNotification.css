@@ -1,0 +1,80 @@
+.notification-card {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  background: white;
+  border: 1px solid #eee;
+  border-left: 4px solid #bb8271;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-family: "Segoe UI", sans-serif;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 14px;
+  white-space: nowrap;
+  margin-top: 2px;
+  background-color: #bb8271;
+  color: white;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.notification-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.notification-user {
+  font-size: 13px;
+  color: #bb8271;
+  font-weight: 500;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #777;
+  text-align: right;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.clock-icon {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.toggle-btn {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  text-align: left;
+}
+
+.extra-info {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}

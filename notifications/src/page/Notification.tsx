@@ -1,9 +1,11 @@
-import "./Notification.css";
+import AlertList from "../component/AlertList";
+import alertsJson from "./alerts.json";
 
-export default () => {
-    return (
-        <div className="notification-container">
-            <p>Notification works!</p>
-        </div>
-    )
+
+function Notification() {
+  return (
+    <AlertList alerts={alertsJson.data} />
+  );
 }
+
+export default Notification;

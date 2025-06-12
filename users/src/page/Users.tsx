@@ -35,7 +35,6 @@ const App = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Gestion des utilisateurs</h1>
       <UserForm selectedUser={selectedUser} onSave={handleSave} />
       <UserList data={users} itemsPerPage={5} onEditSelect={handleEditSelect} onDelete={handleDelete} />
     </div>
