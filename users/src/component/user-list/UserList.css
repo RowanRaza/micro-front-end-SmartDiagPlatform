@@ -3,14 +3,16 @@
         width: 100%;
         border-collapse: collapse;
     }
-    th {
-        background: #eee;
-    }
     td, th {
         border: 1px solid lightgrey;
         padding: 15px;
+        background-color: white;
     }
-    .actions {
+    th {
+        background: #eee;
+    }
+    .table-actions {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;

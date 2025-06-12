@@ -37,9 +37,9 @@ const UserList = ({
                 <td>{user.id}</td>
                 <td>{user.nom}</td>
                 <td>{user.role}</td>
-                <td className="actions">
-                  <RiEditCircleFill className="icon edit-icon" size={25} onClick={() => onEditSelect(user)} />
-                  <FaTrash className="icon delete-icon" size={22} onClick={() => onDelete(user.id)} />
+                <td className="table-actions">
+                  <RiEditCircleFill className="uicon edit-icon" size={25} onClick={() => onEditSelect(user)} />
+                  <FaTrash className="uicon delete-icon" size={22} onClick={() => onDelete(user.id)} />
                 </td>
               </tr>
             ))}
