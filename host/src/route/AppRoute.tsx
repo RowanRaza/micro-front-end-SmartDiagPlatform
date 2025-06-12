@@ -7,6 +7,7 @@ import Dashboard from "dashboard/Dashboard";
 import Notification from "notifications/Notification";
 import Users from "users/Users";
 import Profile from "profile/Profile";
+import Materiels from "materiels/Materiels";
 import { useAuth } from "auth/AuthContext";
 
 function AppRoute() {
@@ -31,6 +32,7 @@ function AppRoute() {
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Notifications" element={<Notification />} />
           <Route path="Utilisateurs" element={<Users />} />
+          <Route path="Materiels" element={<Materiels />} />
           <Route path="Mon_compte" element={<Profile user={{nom: user?.username || '', role: user?.role || ''}} onLogout={() => {logout(); navigate('/')}}/>} />
           <Route path="*" element={<Dashboard/>} />
         </Route>
