@@ -9,7 +9,7 @@ import React, {
 interface User {
   id: string;
   username: string;
-  isAdmin: boolean;
+  role: string;
 }
 
 type AuthContextType = {
@@ -87,6 +87,6 @@ export const useAuth = () => {
 
 async function fakeLogin(username: string, password: string) {
   return new Promise<{ user: User }>((resolve) =>
-    setTimeout(() => resolve({ user: { id: "1", username, isAdmin: true } }), 500)
+    setTimeout(() => resolve({ user: { id: "1", username, role: 'admin' } }), 500)
   );
 }
