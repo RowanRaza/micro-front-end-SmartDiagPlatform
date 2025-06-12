@@ -4,26 +4,25 @@ import DashboardChart from "./components/graph/DashboardChart";
 import GlobalDashboard from "./components/gobal/GlobalDashboard";
 import EquipmentHistory from "../history/History";
 
-export default function Dashboard() {
+export default () => {
   return (
-    <div className="dashboard">
-      <div className="dashboard-left">
+    <div className="dashboard-container">
+      <div className="left-dashboard">
         <WeeklyCalendar />
       </div>
-
-      <div className="dashboard-right">
-        <div className="dashboard-top">
-          <div className="dashboard-graph">
+      <div className="right-dashboard">
+        <div className="top-right">
+          <div className="graph-dashboard">
             <DashboardChart />
           </div>
-          <div className="dashboard-global">
+          <div className="global-dashboard">
             <GlobalDashboard anomalyRate={27.3} />
           </div>
         </div>
-        <div className="dashboard-bottom">
+        <div className="bottom-right">
           <EquipmentHistory />
         </div>
       </div>
     </div>
   );
-}
+};

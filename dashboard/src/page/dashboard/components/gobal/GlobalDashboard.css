@@ -1,92 +1,43 @@
-.global-dashboard-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: #ffffff;
+.global-container {
+  background: #fff;
+  border: 1px solid #bb8271;
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 6px 12px rgba(219, 114, 84, 0.12);
-  color: #bb8271;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(183, 123, 100, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  height: 10%;
 }
 
-/* Texte du haut centré */
-.text-top {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 700;
-  font-size: 1.2rem;
+.global-title {
   color: #d67454;
-  letter-spacing: 0.5px;
-}
-
-/* Texte vertical à gauche */
-.text-left {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%) rotate(-90deg);
+  font-size: 1.4rem;
+  margin-bottom: 5px;
   font-weight: 600;
-  font-size: 0.95rem;
-  color: #bb8271;
-  opacity: 0.8;
-  letter-spacing: 1px;
 }
 
-/* Texte en haut à droite */
-.text-top-right {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #d67454;
-  opacity: 0.9;
+.anomaly-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #d67454, #bb8271);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(214, 116, 84, 0.3);
 }
 
-/* Grand pourcentage stylisé en bas à droite */
-.percentage {
-  position: absolute;
-  bottom: 20px;
-  right: 24px;
-  font-weight: 900;
-  font-size: 4.5rem;
-  color: #d67454;
-  text-shadow: 1px 1px 3px rgba(187, 130, 113, 0.35);
-  user-select: none;
-  line-height: 1;
-  transform: scaleY(2);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .global-dashboard-container {
-    padding: 16px;
-  }
-
-  .text-top {
-    font-size: 1rem;
-  }
-
-  .text-left {
-    font-size: 0.8rem;
-    transform: translateY(-50%) rotate(-90deg) scaleX(1.2);
-  }
-
-  .text-top-right {
-    font-size: 0.85rem;
-  }
-
-  .percentage {
-    font-size: 3rem;
-    transform: scaleY(1.6);
-    right: 16px;
-    bottom: 16px;
-  }
+.ia-comments {
+  font-size: 11px;
+  color: white;
+  border: 1px solid #bb8271;
+  border-radius: 16px;
+  background-color: #bb8271;
+  box-shadow: 0 8px 20px rgba(183, 123, 100, 0.1);
+  padding: 5px;
 }

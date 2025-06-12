@@ -1,87 +1,41 @@
-.dashboard {
+.dashboard-container {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding: 24px;
-  background-color: #fdf9f7;
-  min-height: 100vh;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Left side - Calendar */
-.dashboard-left {
-  flex: 1 1 100%;
-  max-width: 100%;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 6px 14px rgba(187, 130, 113, 0.12);
-  border: 1px solid #f3ebe9;
+.left-dashboard {
+  width: 40%;
+  height: 100%;
 }
 
-/* Right side */
-.dashboard-right {
-  flex: 1 1 100%;
+.right-dashboard {
+  width: 60%;
+  height: 100%;
+}
+
+.top-right {
+  width: 100%;
+  height: 50%;
   display: flex;
-  flex-direction: column;
-  gap: 24px;
 }
 
-/* Top part */
-.dashboard-top {
+.graph-dashboard {
+  width: 50%;
+  height: 100%;
+  margin: 0.5%;
+}
+
+.global-dashboard {
+  width: 50%;
+  height: 100%;
+  margin: 0.5%;
+}
+
+.bottom-right {
+  width: 98%;
+  height: 46%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.dashboard-graph,
-.dashboard-global {
-  flex: 1 1 300px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 6px 14px rgba(187, 130, 113, 0.1);
-  border: 1px solid #f3ebe9;
-  min-height: 250px;
-  transition: transform 0.2s ease;
-}
-
-.dashboard-graph:hover,
-.dashboard-global:hover {
-  transform: translateY(-3px);
-}
-
-/* Bottom - History */
-.dashboard-bottom {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 6px 14px rgba(187, 130, 113, 0.1);
-  border: 1px solid #f3ebe9;
-  min-height: 300px;
-}
-
-/* Responsive */
-@media (min-width: 900px) {
-  .dashboard {
-    flex-wrap: nowrap;
-  }
-
-  .dashboard-left {
-    flex: 1 1 40%;
-    max-width: 40%;
-  }
-
-  .dashboard-right {
-    flex: 1 1 60%;
-    max-width: 60%;
-  }
-}
-
-@media (max-width: 600px) {
-  .dashboard-graph,
-  .dashboard-global {
-    flex: 1 1 100%;
-  }
+  margin: 0.5%;
+  margin-top: 3%;
 }

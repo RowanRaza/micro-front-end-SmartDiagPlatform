@@ -81,7 +81,7 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .calendar-day:hover {
@@ -140,4 +140,53 @@
   .calendar-days {
     justify-content: center;
   }
+}
+
+.equipment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.equipment-card {
+  border: 1px solid rgba(187, 130, 113, 0.5);
+  border-radius: 6px;
+  background-color: #faf5f2;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  max-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.equipment-card h4 {
+  margin: 0 0 0.25rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.95rem;
+  background-color: rgba(214, 116, 84, 0.8);
+  color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.equipment-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+}
+
+.equipment-card li {
+  flex: 1 1 calc(50% - 0.8rem);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #4a4a4a;
+}
+
+.equipment-card li strong {
+  color: #bb8271;
 }
