@@ -1,12 +1,10 @@
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
+import Users from "./page/Users";
 
 const App = () => (
-  <div className="container">
-    <div>Name: users</div>
-    <div>Framework: react-19</div>
-  </div>
+  <Users/>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);

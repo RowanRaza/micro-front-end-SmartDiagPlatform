@@ -1,0 +1,52 @@
+.user-list-container {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th {
+        background: #eee;
+    }
+    td, th {
+        border: 1px solid lightgrey;
+        padding: 15px;
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+    }
+    .delete-icon {
+        color: lightcoral;
+    }
+    .edit-icon {    
+        color: #40484b;
+    }
+    .icon:hover {
+        color: brown;
+    }
+    .icon:active {
+        color: #777;
+    }
+    .table-container {
+        overflow-x: scroll;
+    }
+    .display-control {
+        width: calc(100% - 30px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+        
+        button {
+            padding: 10px;
+            width: 100px;
+            margin: 0 7px;
+            background-color: #eee;
+            font-weight: bold;
+            border: 1px solid #777;
+            border-radius: 5px;
+        }
+    }
+}
