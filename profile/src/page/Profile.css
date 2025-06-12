@@ -1,0 +1,62 @@
+.mon-compte-container {
+  background-color: #fff;
+  padding: 32px;
+  margin: 10px auto;
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(187, 130, 113, 0.1);
+  color: #4e342e;
+}
+
+.mon-compte-container h2 {
+  font-size: 24px;
+  color: #bb8271;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.info-section {
+  background-color: #fef2ee;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 16px;
+  border-left: 4px solid #bb8271;
+}
+
+.action-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-action,
+.btn-logout {
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-action {
+  background-color: #bb8271;
+  color: white;
+}
+
+.btn-action:hover {
+  background-color: #a16f60;
+}
+
+.btn-logout {
+  background-color: #eee;
+  color: #bb8271;
+}
+
+.btn-logout:hover {
+  background-color: #ddd;
+}

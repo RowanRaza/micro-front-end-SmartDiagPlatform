@@ -6,6 +6,7 @@ import Login from "auth/Login";
 import Dashboard from "dashboard/Dashboard";
 import Notification from "notifications/Notification";
 import Users from "users/Users";
+import Profile from "profile/Profile";
 
 function AppRoute() {
   return (
@@ -28,6 +29,7 @@ function AppRoute() {
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Notifications" element={<Notification />} />
           <Route path="Utilisateurs" element={<Users />} />
+          <Route path="Mon_compte" element={<Profile />} />
           <Route path="*" element={<>La route n'existe pas encore</>} />
         </Route>
       </Routes>
