@@ -1,5 +1,5 @@
 // App.jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useRoutes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import ProtectedLayout from "./ProtectedLayout";
 import Login from "auth/Login";
@@ -7,15 +7,17 @@ import Dashboard from "dashboard/Dashboard";
 import Notification from "notifications/Notification";
 import Users from "users/Users";
 import Profile from "profile/Profile";
+import { useAuth } from "auth/AuthContext";
 
 function AppRoute() {
+  const {logout, user} = useAuth();
+  const navigate = useNavigate(); 
   return (
-    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login onLogged={() => {navigate('app/dashboard')}} />} />
 
         {/* Routes publiques */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login onLogged={() => {navigate('app/dashboard')}}/>} />
 
         {/* Routes protégées dans un layout avec sidebar */}
         <Route
@@ -29,11 +31,10 @@ function AppRoute() {
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Notifications" element={<Notification />} />
           <Route path="Utilisateurs" element={<Users />} />
-          <Route path="Mon_compte" element={<Profile />} />
-          <Route path="*" element={<>La route n'existe pas encore</>} />
+          <Route path="Mon_compte" element={<Profile user={{nom: user?.username || '', role: user?.role || ''}} onLogout={() => {logout(); navigate('/')}}/>} />
+          <Route path="*" element={<Dashboard/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 }
 export default AppRoute;

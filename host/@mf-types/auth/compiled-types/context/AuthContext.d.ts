@@ -2,7 +2,7 @@ import React from "react";
 interface User {
     id: string;
     username: string;
-    isAdmin: boolean;
+    role: string;
 }
 type AuthContextType = {
     user: User | null;

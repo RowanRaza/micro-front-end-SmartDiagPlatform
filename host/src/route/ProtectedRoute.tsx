@@ -5,7 +5,7 @@ import './ProtectedLayout.css';
 
 const ProtectedRoute = ({ children } : { children : React.ReactNode }) => {
     const {isAuthenticated} = useAuth();
-    if (!true) {
+    if (!isAuthenticated) {
         return <Navigate to="/login" />;
     }
     return children;

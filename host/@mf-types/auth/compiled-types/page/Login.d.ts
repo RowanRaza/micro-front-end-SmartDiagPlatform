@@ -1,3 +1,4 @@
 import './login.css';
-declare const _default: () => import("react/jsx-runtime").JSX.Element;
-export default _default;
+export default function Login({ onLogged }: {
+    onLogged: () => void;
+}): import("react/jsx-runtime").JSX.Element;
