@@ -1,34 +1,31 @@
 /* CONTAINER & LAYOUT */
 .calendar-container {
-  padding: 0.5rem;
-  max-width: 500px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.75);
+  background: white;
   border-radius: 16px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  border: 1px solid #f0ebe9;
-  padding-bottom: 6.5%;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* NAVIGATION: Mois / Année */
 .calendar-nav.centered-nav {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  align-items: center;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .calendar-nav.centered-nav button {
-  padding: 0.35rem 0.7rem;
-  border: none;
   background: transparent;
-  font-size: 1rem;
+  border: none;
   color: #bb8271;
+  font-size: 1.2rem;
+  padding: 6px 10px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .calendar-nav.centered-nav button:hover {
@@ -37,29 +34,29 @@
 
 .month-year {
   font-weight: 600;
-  font-size: 1rem;
-  padding: 0 0.5rem;
+  font-size: 1.1rem;
   color: #4b3a35;
   text-transform: capitalize;
+  padding: 0 10px;
 }
 
-/* NAVIGATION FLECHES */
+/* NAVIGATION: jours */
 .calendar-main {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  gap: 16px;
 }
 
 .arrow-button {
   font-size: 1.4rem;
-  padding: 0.3rem 0.6rem;
   background: none;
   border: none;
   color: #bb8271;
-  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.2s;
+  border-radius: 50%;
+  padding: 6px 10px;
+  transition: background-color 0.2s ease;
 }
 
 .arrow-button:hover {
@@ -69,27 +66,27 @@
 /* DAYS */
 .calendar-days {
   display: flex;
+  gap: 12px;
+  flex: 1;
   justify-content: center;
-  gap: 1rem;
-  transition: all 0.3s ease;
+  flex-wrap: wrap;
 }
 
 .calendar-day {
-  flex: 1;
-  min-width: 90px;
-  padding: 1rem;
-  background: #ffffff;
-  border: 1px solid #f1f1f1;
+  background: #fff;
+  border: 1px solid #f0f0f0;
   border-radius: 10px;
-  cursor: pointer;
+  padding: 12px 8px;
+  min-width: 90px;
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
 .calendar-day:hover {
-  background-color: #f9f5f4;
-  border-color: #e9dedb;
+  background-color: #f8f4f2;
+  border-color: #e2d5d0;
 }
 
 .calendar-day.selected {
@@ -97,44 +94,50 @@
   border-color: #d67454;
 }
 
-/* STYLE SPECIAL POUR LE JOUR DU CENTRE */
 .calendar-day.center-day {
-  flex: 1.5;
   background-color: #bb8271;
-  border: 1px solid #bb8271;
-  color: #ffffff;
+  border-color: #bb8271;
+  color: #fff;
 }
 
 .calendar-day.center-day .day-name,
 .calendar-day.center-day .day-date,
 .calendar-day.center-day .day-year {
-  color: #ffffff;
+  color: #fff;
 }
 
 /* TEXTES */
 .day-name {
+  font-weight: 600;
   font-size: 1rem;
-  font-weight: 500;
   text-transform: capitalize;
   color: #4b3a35;
 }
 
 .day-date {
   font-size: 0.9rem;
-  margin-top: 0.2rem;
   color: #6b4e45;
 }
 
 .day-year {
-  font-size: 0.7rem;
-  margin-top: 0.3rem;
+  font-size: 0.75rem;
   color: #a89b95;
 }
 
 .calendar-selection {
-  margin-top: 1rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #8d7269;
   font-style: italic;
+  font-size: 0.9rem;
+  color: #7b5f57;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .calendar-main {
+    flex-direction: column;
+  }
+
+  .calendar-days {
+    justify-content: center;
+  }
 }

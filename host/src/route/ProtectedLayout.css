@@ -10,7 +10,7 @@
     transition: margin-left 0.3s ease;
     flex-direction: column;
     padding: 5px;
-    background-color: #f7f7f7;
+    background-color: #fdf9f7;
 }
 
 .mb-container.hidden + .content {

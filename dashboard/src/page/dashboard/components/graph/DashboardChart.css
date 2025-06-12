@@ -1,20 +1,54 @@
 .dashboard-chart-container {
-  max-width: 480px; /* plus petit que 600px */
+  max-width: 520px;
   margin: 0 auto;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(187, 130, 113, 0.1);
+  border: 1px solid #f2e8e6;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* uPlot root adjustments */
 .dashboard-chart-container .u-root {
   width: 100% !important;
   height: 220px !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Title (if any added later) */
 .dashboard-chart-container .u-title {
-  font-size: 0.9rem !important; /* un peu plus petit */
+  font-size: 1rem !important;
   font-weight: 600;
-  color: #333;
+  color: #4b3a35;
   margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Axis & lines */
+.dashboard-chart-container .u-legend {
+  font-size: 0.75rem;
+  color: #6b4e45;
+}
+
+.dashboard-chart-container .u-legend .u-series {
+  font-weight: 500;
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  .dashboard-chart-container {
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+  }
+
+  .dashboard-chart-container .u-root {
+    height: 180px !important;
+  }
+
+  .dashboard-chart-container .u-legend {
+    font-size: 0.7rem;
+  }
 }

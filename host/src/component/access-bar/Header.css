@@ -1,31 +1,35 @@
 .header-container {
-    padding: 15px;
-    margin-bottom: 5px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    color: #a39d85;
-    background-color: #fff;
+  padding: 15px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 7px rgba(187, 130, 113, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #bb8271;
 }
 
 .home-icon {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
+  cursor: pointer;
 }
 
 .hamburg-menu {
+  display: block;
+  visibility: visible;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  .home-icon {
     display: block;
     visibility: visible;
-}
-@media screen and (max-width: 620px) {
-    .home-icon {
-        display: block;
-        visibility: visible;
-    }
-    .hamburg-menu {
-        display: none;
-        visibility: hidden;
-    }
+  }
+
+  .hamburg-menu {
+    display: none;
+    visibility: hidden;
+  }
 }
