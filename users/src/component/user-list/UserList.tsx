@@ -20,26 +20,30 @@ const UserList = ({
   const currentUsers = data.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="user-list-container">
-      <div className="table-container">
+    <div className="user-list">
+      <div className="table-wrapper">
         <table>
           <thead>
             <tr>
               <th>ID</th>
               <th>Nom</th>
               <th>Rôle</th>
-              <th>Action</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {currentUsers.map((user) => (
+            {currentUsers.map(user => (
               <tr key={user.id}>
                 <td>{user.id}</td>
                 <td>{user.nom}</td>
                 <td>{user.role}</td>
-                <td className="table-actions">
-                  <RiEditCircleFill className="uicon edit-icon" size={25} onClick={() => onEditSelect(user)} />
-                  <FaTrash className="uicon delete-icon" size={22} onClick={() => onDelete(user.id)} />
+                <td className="actions">
+                  <button className="icon-btn edit" onClick={() => onEditSelect(user)}>
+                    <RiEditCircleFill size={20} />
+                  </button>
+                  <button className="icon-btn delete" onClick={() => onDelete(user.id)}>
+                    <FaTrash size={18} />
+                  </button>
                 </td>
               </tr>
             ))}
@@ -47,10 +51,14 @@ const UserList = ({
         </table>
       </div>
 
-      <div className="display-control">
-        <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1}>Précédent</button>
+      <div className="pagination">
+        <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1}>
+          ⬅ Précédent
+        </button>
         <span>Page {currentPage} / {totalPages}</span>
-        <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages}>Suivant</button>
+        <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages}>
+          Suivant ➡
+        </button>
       </div>
     </div>
   );

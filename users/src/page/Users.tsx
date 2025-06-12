@@ -34,9 +34,9 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <UserForm selectedUser={selectedUser} onSave={handleSave} />
+    <div>
       <UserList data={users} itemsPerPage={5} onEditSelect={handleEditSelect} onDelete={handleDelete} />
+      <UserForm selectedUser={selectedUser} onSave={handleSave} />
     </div>
   );
 };
