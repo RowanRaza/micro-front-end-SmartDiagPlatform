@@ -5,6 +5,7 @@ import ProtectedLayout from './ProtectedLayout';
 import Login from "auth/Login";
 import Dashboard from "dashboard/Dashboard";
 import Notification from "notifications/Notification";
+import Users from "users/Users";
 
 function AppRoute() {
   return (
@@ -24,6 +25,7 @@ function AppRoute() {
         >
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Notifications" element={<Notification />} />
+          <Route path="Utilisateurs" element={<Users />} />
           <Route path="*" element={<>La route n'existe pas encore</>} />
         </Route>
       </Routes>
